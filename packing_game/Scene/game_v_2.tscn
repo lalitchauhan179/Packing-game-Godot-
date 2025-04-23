@@ -1,0 +1,85 @@
+[gd_scene load_steps=16 format=3 uid="uid://hnuxvwwo1ady"]
+
+[ext_resource type="Texture2D" uid="uid://3k26fgn6s2cl" path="res://Assets/background/images.jpeg" id="2_sf8ug"]
+[ext_resource type="PackedScene" uid="uid://cvelrw2ggoiwv" path="res://Scene/re.tscn" id="3_wcpg4"]
+[ext_resource type="PackedScene" uid="uid://cc4rjx14xfn2w" path="res://Scene/tie.tscn" id="4_wgijh"]
+[ext_resource type="PackedScene" uid="uid://cqftwihfjdytg" path="res://Scene/shoe.tscn" id="5_0uuen"]
+[ext_resource type="PackedScene" uid="uid://dtq44fe6t014c" path="res://Scene/lolipop.tscn" id="6_knfoi"]
+[ext_resource type="PackedScene" uid="uid://dcp5lxku8bd0d" path="res://Scene/card.tscn" id="7_duxkr"]
+[ext_resource type="PackedScene" uid="uid://cnioapg55djtk" path="res://Scene/book.tscn" id="8_eodgr"]
+[ext_resource type="PackedScene" uid="uid://cnj61b5fsgu32" path="res://Scene/candy.tscn" id="9_vk6or"]
+[ext_resource type="PackedScene" uid="uid://coxlbcg15qqq8" path="res://Scene/shoe_plat.tscn" id="10_cq24g"]
+[ext_resource type="PackedScene" uid="uid://dyfxx0y0sr5le" path="res://Scene/card_plat.tscn" id="11_yn3g4"]
+[ext_resource type="PackedScene" uid="uid://cdkct036rrgnb" path="res://Scene/tie_plat.tscn" id="12_aei42"]
+[ext_resource type="PackedScene" uid="uid://bikqbehcyhj6d" path="res://Scene/lolipop_plat.tscn" id="13_1k83x"]
+[ext_resource type="PackedScene" uid="uid://cyfcpbuhs2lhh" path="res://Scene/book_plat.tscn" id="14_yf6vp"]
+[ext_resource type="PackedScene" uid="uid://28lhx30ewv8o" path="res://Scene/candy_plat.tscn" id="15_rfn0d"]
+[ext_resource type="Texture2D" uid="uid://c5qbmvju81xp1" path="res://Assets/object/suitcase102 - Copy.png" id="15_sqok3"]
+
+[node name="game_V_2" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(542, 952)
+
+[node name="back" type="TextureRect" parent="."]
+z_index = -2
+offset_left = -80.0
+offset_top = -11.0
+offset_right = 1112.0
+offset_bottom = 2054.0
+texture = ExtResource("2_sf8ug")
+
+[node name="re" parent="." instance=ExtResource("3_wcpg4")]
+position = Vector2(917, 39)
+
+[node name="objects" type="Node" parent="."]
+
+[node name="tie" parent="objects" instance=ExtResource("4_wgijh")]
+position = Vector2(521, 1593)
+
+[node name="shoe" parent="objects" instance=ExtResource("5_0uuen")]
+position = Vector2(835, 1648)
+
+[node name="lolipop" parent="objects" instance=ExtResource("6_knfoi")]
+position = Vector2(170, 1665)
+
+[node name="card" parent="objects" instance=ExtResource("7_duxkr")]
+position = Vector2(195, 1308)
+
+[node name="book" parent="objects" instance=ExtResource("8_eodgr")]
+position = Vector2(890, 1322)
+
+[node name="candy" parent="objects" instance=ExtResource("9_vk6or")]
+position = Vector2(547, 1156)
+
+[node name="object_platform" type="Node" parent="."]
+
+[node name="shoe_plat" parent="object_platform" groups=["book"] instance=ExtResource("10_cq24g")]
+position = Vector2(809, 369)
+
+[node name="ColorRect" type="ColorRect" parent="object_platform/shoe_plat"]
+offset_left = -141.0
+offset_top = -55.0
+offset_right = 161.0
+offset_bottom = 80.0
+
+[node name="card_plat" parent="object_platform" instance=ExtResource("11_yn3g4")]
+position = Vector2(390, 719)
+
+[node name="tie_plat" parent="object_platform" instance=ExtResource("12_aei42")]
+position = Vector2(192, 569)
+
+[node name="lolipop_plat" parent="object_platform" instance=ExtResource("13_1k83x")]
+position = Vector2(398, 460)
+
+[node name="book_plat" parent="object_platform" instance=ExtResource("14_yf6vp")]
+position = Vector2(848, 658)
+
+[node name="candy_plat" parent="object_platform" instance=ExtResource("15_rfn0d")]
+position = Vector2(636, 615)
+
+[node name="Suitcase2" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(554, 573)
+scale = Vector2(2.76961, 2.46254)
+texture = ExtResource("15_sqok3")

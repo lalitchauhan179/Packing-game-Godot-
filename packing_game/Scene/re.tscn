@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvelrw2ggoiwv"]
+
+[ext_resource type="Texture2D" uid="uid://2hq3r4mtauh6" path="res://Assets/button/pngwing.com (3).png" id="1_twy60"]
+[ext_resource type="Script" path="res://Scripts/re.gd" id="2_8gdv0"]
+
+[node name="re" type="Button"]
+anchors_preset = -1
+anchor_left = 0.873
+anchor_top = 0.026
+anchor_right = 0.873
+anchor_bottom = 0.026
+offset_left = 0.159973
+offset_top = 0.34
+offset_right = 2008.16
+offset_bottom = 2128.34
+scale = Vector2(0.0528364, 0.0502794)
+size_flags_horizontal = 0
+icon = ExtResource("1_twy60")
+script = ExtResource("2_8gdv0")

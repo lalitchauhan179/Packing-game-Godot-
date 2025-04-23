@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyfcpbuhs2lhh"]
+
+[ext_resource type="Script" path="res://Scripts/platform.gd" id="1_0uxf2"]
+[ext_resource type="Texture2D" uid="uid://b2eto724k8rlv" path="res://Assets/object/book.png" id="2_jryb7"]
+
+[node name="book_plat" type="StaticBody2D" groups=["book"]]
+script = ExtResource("1_0uxf2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.372549)
+scale = Vector2(0.15, 0.161)
+texture = ExtResource("2_jryb7")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(0.15, 0.161)
+polygon = PackedVector2Array(-456.5, -788, -456.5, -786.8, -473.8, -784, -479.9, -784, -494.9, -778, -498, -778, -520.1, -766, -522.3, -766, -532.2, -757, -534.4, -757, -556.4, -731, -557.8, -731, -566.8, -711, -568.2, -711, -571.2, -695, -572.5, -695, -572.5, 664.1, -569.5, 695.2, -569.5, 706.4, -566.5, 714.4, -566.5, 720.4, -553.5, 749.3, -553.5, 751.8, -530.5, 775.7, -530.5, 777.4, -515.5, 783.3, -515.5, 784.7, -501.5, 786.7, -501.5, 788, 563.3, 788, 569.3, 782, 571.5, 782, 571.5, 778, 573.3, 778, 570.5, 769.6, 570.5, 767.1, 561.3, 759, 553.5, 759, 553.5, 743, 552.5, 743, 552.5, 596.5, 558.7, 585, 560.3, 585, 562.3, 570, 563.5, 570, 563.5, -743, 562.5, -743, 562.5, -759.5, 557.5, -769.5, 557.5, -771.9, 546.5, -781.9, 546.5, -783.5, 536.5, -786.5, 536.5, -788)

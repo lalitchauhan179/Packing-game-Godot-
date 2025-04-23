@@ -1,0 +1,84 @@
+[gd_scene load_steps=16 format=3 uid="uid://f56fa7v2ohfe"]
+
+[ext_resource type="Texture2D" uid="uid://c5qbmvju81xp1" path="res://Assets/object/suitcase102 - Copy.png" id="1_6pftr"]
+[ext_resource type="PackedScene" uid="uid://dcp5lxku8bd0d" path="res://Scene/card.tscn" id="1_tepau"]
+[ext_resource type="PackedScene" uid="uid://cdkct036rrgnb" path="res://Scene/tie_plat.tscn" id="3_w2tn7"]
+[ext_resource type="PackedScene" uid="uid://cqftwihfjdytg" path="res://Scene/shoe.tscn" id="5_4j7qv"]
+[ext_resource type="PackedScene" uid="uid://coxlbcg15qqq8" path="res://Scene/shoe_plat.tscn" id="6_a2lua"]
+[ext_resource type="PackedScene" uid="uid://dtq44fe6t014c" path="res://Scene/lolipop.tscn" id="6_l43q0"]
+[ext_resource type="PackedScene" uid="uid://cnioapg55djtk" path="res://Scene/book.tscn" id="8_wfyph"]
+[ext_resource type="Texture2D" uid="uid://3k26fgn6s2cl" path="res://Assets/background/images.jpeg" id="9_4smxy"]
+[ext_resource type="PackedScene" uid="uid://cnj61b5fsgu32" path="res://Scene/candy.tscn" id="9_7xc10"]
+[ext_resource type="PackedScene" uid="uid://cvelrw2ggoiwv" path="res://Scene/re.tscn" id="10_du5b5"]
+[ext_resource type="PackedScene" uid="uid://dyfxx0y0sr5le" path="res://Scene/card_plat.tscn" id="11_1vuik"]
+[ext_resource type="PackedScene" uid="uid://cc4rjx14xfn2w" path="res://Scene/tie.tscn" id="12_2wj0q"]
+[ext_resource type="PackedScene" uid="uid://bikqbehcyhj6d" path="res://Scene/lolipop_plat.tscn" id="13_gy67u"]
+[ext_resource type="PackedScene" uid="uid://cyfcpbuhs2lhh" path="res://Scene/book_plat.tscn" id="14_786xj"]
+[ext_resource type="PackedScene" uid="uid://28lhx30ewv8o" path="res://Scene/candy_plat.tscn" id="15_keog4"]
+
+[node name="game" type="Node2D"]
+
+[node name="Suitcase" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(554, 573)
+scale = Vector2(2.76961, 2.46254)
+texture = ExtResource("1_6pftr")
+
+[node name="back" type="TextureRect" parent="."]
+z_index = -2
+offset_left = -1.0
+offset_top = -7.0
+offset_right = 1094.0
+offset_bottom = 1937.0
+texture = ExtResource("9_4smxy")
+
+[node name="re" parent="." instance=ExtResource("10_du5b5")]
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 952.0
+offset_top = 61.0
+offset_right = 2960.0
+offset_bottom = 2189.0
+
+[node name="objects" type="Node" parent="."]
+
+[node name="tie" parent="objects" instance=ExtResource("12_2wj0q")]
+position = Vector2(521, 1593)
+
+[node name="shoe" parent="objects" instance=ExtResource("5_4j7qv")]
+position = Vector2(835, 1648)
+
+[node name="lolipop" parent="objects" instance=ExtResource("6_l43q0")]
+position = Vector2(204, 1665)
+
+[node name="card" parent="objects" instance=ExtResource("1_tepau")]
+position = Vector2(195, 1308)
+
+[node name="book" parent="objects" instance=ExtResource("8_wfyph")]
+position = Vector2(890, 1322)
+
+[node name="candy" parent="objects" instance=ExtResource("9_7xc10")]
+position = Vector2(547, 1156)
+
+[node name="object_platform" type="Node" parent="."]
+
+[node name="shoe_plat" parent="object_platform" instance=ExtResource("6_a2lua")]
+position = Vector2(809, 369)
+
+[node name="card_plat" parent="object_platform" instance=ExtResource("11_1vuik")]
+position = Vector2(389, 725)
+
+[node name="tie_plat" parent="object_platform" instance=ExtResource("3_w2tn7")]
+position = Vector2(192, 569)
+
+[node name="lolipop_plat" parent="object_platform" instance=ExtResource("13_gy67u")]
+position = Vector2(399, 461)
+
+[node name="book_plat" parent="object_platform" instance=ExtResource("14_786xj")]
+position = Vector2(848, 658)
+
+[node name="candy_plat" parent="object_platform" instance=ExtResource("15_keog4")]
+position = Vector2(636, 615)

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1a22hl1g638b"]
+
+[ext_resource type="AudioStream" uid="uid://cqrdpbc65vok1" path="res://Assets/music/fm-freemusic-cheerful-whistling(chosic.com).mp3" id="1_6cnsl"]
+
+[node name="music" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_6cnsl")
+autoplay = true
